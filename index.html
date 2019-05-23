@@ -14,7 +14,7 @@
             position: relative;
             width: 100%;
         }
-        #did img {
+        #Imgid {
             position: absolute;
             vertical-align: top;
             width: 100%;
@@ -43,18 +43,49 @@
         }
         #nav ul{
             list-style: none;
-            margin-left: 50px;
+            margin-left: 10px;
+            width: 500px;
         }
-        #nav li{
-            line-height: 40px;
-            float: left;
+        .Ul li{
+            padding: 0px 0px 0px 10px;
+            float: contour;
             display: inline;
         }
-        #nav a{
+        .Ul a{
             color: #fff;
             text-decoration: none;
-            padding: 20px 20px;
+            padding: 10px 10px;
 
+        }
+        .Ul a:hover {
+            background-color: darkseagreen;
+        }
+        #nuv a{
+            float: right;
+            padding: 10px 10px;
+        }
+        .Ul2{
+            float: right;
+            margin: 0px;
+            position: relative;
+            width: 50%;
+        }
+        .Ul2 li{
+            margin: 0px ;
+            padding: 0px 0px 50px 50px;
+            display: inline;
+        }
+
+        #linkArea img:first-child {
+            top: -3px;
+            position: absolute;
+            right: 70px;
+        }
+
+        #linkArea img:last-child {
+            top: 5px;
+            position: absolute;
+            right: 20px;
         }
     </style>
 
@@ -65,7 +96,7 @@
 </head>
 <body>
     <div id="did">
-        <img src="images/caoyuan.jpg">
+        <img id="Imgid" src="images/caoyuan.jpg">
         <span>Better Luck Tomorrow</span>
         <div id="nav">
             <ul class="Ul">
@@ -79,6 +110,11 @@
                     <a href="#" title="关于">关于</a>
                 </li>
             </ul>
+
+            <div id="linkArea" style="float: right;">
+                <img src="images/QQ.png" style="width: 55px;height: 55px">
+                <img src="images/wechat.png" style="width: 43px;height: 38px">
+            </div>
         </div>
     </div>
 
