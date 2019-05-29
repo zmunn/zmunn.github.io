@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <title>my page</title>
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         body{
             margin: 0px;
             padding: 0px;
             border: 0px;
-            background-color: papayawhip;
         }
-        #did{
+        /*滚动条样式*/
+        html,body{
+            scrollbar-face-color: #98a363;
+            scrollbar-highlight-color: #e3e69d;
+            scrollbar-shadow-color: #999999;
+            scrollbar-3dlight-color: #000000;
+            scrollbar-arrow-color: #000;
+            scrollbar-track-color: #f4f4f0;
+            scrollbar-darkshadow-color: #666666;
+        }
+        #top{
             position: relative;
             width: 100%;
         }
@@ -21,102 +34,265 @@
             height: 300px;
             opacity:0.9;//图片透明度
         }
-        span{
+        #top span{
             position: absolute;
             font-size: 23px;
             font-family: "Times New Roman",Tims,serif;
             font-weight: bold;
             line-height: 20px;
-            left: 43%;
+            left: 10%;
             opacity:0.8;
-            padding-top: 190px;
-            color: antiquewhite;
+            padding-top: 160px;
+            color: khaki;
         }
         #nav{
             margin: 0px;
             padding: 0px;
-            background-color: yellowgreen;
+            background: url("images/999991.jpg");
             position: absolute;
             width: 100%;
             height: 50px;
             top:300px;
         }
-        #nav ul{
-            list-style: none;
-            margin-left: 10px;
-            width: 500px;
+        nav{
         }
-        .Ul li{
-            padding: 0px 0px 0px 10px;
-            float: contour;
-            display: inline;
-        }
-        .Ul a{
+        a{text-decoration: none;}
+        nav a{
+            top: 15px;
+            margin-left: 30px;
             color: #fff;
-            text-decoration: none;
-            padding: 10px 10px;
-
-        }
-        .Ul a:hover {
-            background-color: darkseagreen;
-        }
-        #nuv a{
-            float: right;
-            padding: 10px 10px;
-        }
-        .Ul2{
-            float: right;
-            margin: 0px;
+            padding: 14px 10px;
             position: relative;
-            width: 50%;
+            font-size: 16px;
+            text-align: center;
         }
-        .Ul2 li{
-            margin: 0px ;
-            padding: 0px 0px 50px 50px;
-            display: inline;
+        nav a:hover {
+            background:  url("images/99999.jpg");
+        }
+        nav img{
+            position: relative;
+            top: 8px;
+            float: right;
+        }
+        .Uclass1{
+            top: 350px;
+            left: 120px;
+            padding: 0px;
+            height: 60px;
+            width: 85px;
+            background: darkseagreen;
+            position: relative;
+            list-style: none;
+            text-align: center;
+            color: papayawhip;
+            display: none;
+        }
+        .Uclass2{
+            top: 274px;
+            left: 350px;
+            padding: 0px;
+            height: 60px;
+            width: 85px;
+            background: darkseagreen;
+            position: relative;
+            list-style: none;
+            text-align: center;
+            color: papayawhip;
+            display: none;
+        }
+        /*内容区样式*/
+        #main{
+            position: relative;
+            top: 350px;
+           height: 560px;
+            /*background: beige*/;
+            width: 100%;
+        }
+        #left{
+            width: 300px;
+            height: 350px;
+            border: 1px solid #d9d9d9;
+            margin-top: 10px;
+            margin-left: 15px;
+            float: left;
+            clear: left;/*图像左侧不允许出现浮动元素*/
+        }
+        h4{
+            letter-spacing: 3px;
+            font-size: 15px;
+            background: url("images/999991.jpg") repeat-x;
+            height: 24px;
+            border-bottom: 1px solid #d9d9d9;
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+        #left h4{
+            width: 291px;
+        }
+        #left ul{
+            margin: 16px;
+            line-height: 3em;
+        }
+        #left li{
+            width: 200px;
+            font-size: 16px;
+            white-space: nowrap;/*规定li标签的文本不进行换行*/
+            overflow: hidden;/*overflow 属性规定当内容溢出元素框时发生的事情*/
+            text-overflow: ellipsis;/*text-overflow 属性规定当文本溢出包含元素时发生的事情;ellipsis:显示省略符号来代表被修剪的文本。*/
+        }
+        #right{
+            width: 800px;
+            height: 350px;
+            border: 1px solid #d9d9d9;
+            margin-left: 15px;
+            margin-top: 10px;
+            float: left;
+        }
+        #right h4{width: 790px;}
+        #right h5,#right .date,#right p{margin-left: 30px}
+        #right h5{
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .date{
+            font-size: initial;
+        }
+        #right p{
+            width: 730px;
+            height: 100px;
+            background: #e5e5e5;
+            border: 1px solid #999999;
+            text-indent: 2em;/*text-indent 属性规定文本块中首行文本的缩进*/
+            overflow: hidden;
+        }
+        #right span{
+            color: black;
+            width: 100px;
+            height: 30px;
+            font-size: 14px;
+        }
+        hr{margin-top: 20px}
+        #photo{
+            width: 1113px;
+            height: 176px;
+            border: 1px solid #d9d9d9;
+            margin-left: 20px;
+            margin-top: 20px;
+            float: left;
+            clear: both;
+        }
+        #photo h4{width: 1103px;}
+        #photo_img{
+            width: 1130px;
+            margin-left: 60px;
+            margin-top: 5px;
+            text-align: center;
+        }
+        #photo img{
+            display: block;/*块级元素block:总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示*/
+            width: 130px;
+            height: 100px;
+            float: left;
+            margin-right: 45px;
+            border: 1px solid #d9d9d9;
+        }
+        #photo h5{
+            width: 120px;
+            margin-right: 45px;
+            margin-top: 5px;
+            font-size: 12px;
+            float: left;
+        }
+        #bt{
+            height: 46px;
+            padding-top: 34px;
+            text-align: center;
+            position: relative;
+            top: 350px;
+            color: red;
         }
 
-        #linkArea img:first-child {
-            top: -3px;
-            position: absolute;
-            right: 70px;
-        }
-
-        #linkArea img:last-child {
-            top: 5px;
-            position: absolute;
-            right: 20px;
-        }
     </style>
-
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script>
+        $(document).ready(function () {
 
-
+        })
     </script>
 </head>
 <body>
-    <div id="did">
-        <img id="Imgid" src="images/caoyuan.jpg">
+    <div id="top">
+        <img id="Imgid" src="images/guide.jpg">
         <span>Better Luck Tomorrow</span>
-        <div id="nav">
-            <ul class="Ul">
-                <li>
-                    <a href="#" title="首页">首页</a>
-                </li>
-                <li>
-                    <a href="#" title="个人空间">个人空间</a>
-                </li>
-                <li>
-                    <a href="#" title="关于">关于</a>
-                </li>
-            </ul>
-
-            <div id="linkArea" style="float: right;">
-                <img src="images/QQ.png" style="width: 55px;height: 55px">
-                <img src="images/wechat.png" style="width: 43px;height: 38px">
-            </div>
-        </div>
     </div>
+    <div id="nav">
+            <nav>
+                <a href="index.html" target="_self">首  页</a>
+                <a href="#" title="日 志">日 志</a>
+                <a href="#" title="相 册">相 册</a>
+                <a href="#" title="留 言">留 言</a>
+                <img src="images/QQ.png" style="width: 50px;height: 50px;right: 150px;top:-2px">
+                <img src="images/wechat.png" style="width: 35px;height: 30px;right: 50px;">
+                <img src="images/email.png" style="width: 35px;height: 30px;right: -50px;">
+            </nav>
+        </div>
+    <ul class="Uclass1">
+                <li>学 习</li>
+                <li>生 活</li>
+                <li>记 录</li>
+            </ul>
+    <ul class="Uclass2">
+            <li>联系方式</li>
+        </ul>
+    <div id="main">
+        <div id="left">
+                <h4>|最新留言</h4>
+                <ul>
+                    <li>*留言内容一</li>
+                    <li>*留言内容二</li>
+                    <li>*留言内容三</li>
+                    <li>*留言内容四</li>
+                    <li>*留言内容五</li>
+                    <li>*留言内容六</li>
+                </ul>
+            </div>
+        <div id="right">
+                <h4>|最新日志</h4>
+                <h5>jQuery学习—选测器的使用</h5>
+                <span class="date">2019/05/23</span>
+                <br/>
+                <p>近期jQyery学习记录：
+                    <br>
+                    <a href="jQuery/jQtest_5.23_1.html">表单选测器的使用</a>
+                    <br/>
+                    <a href="jQuery/jQtest_5.23_2.html">子元素选择器示例</a>
+                </p>
+                <hr/>
+                <h5>日志标题2</h5>
+                <span class="date">日期修改时间</span>
+                <br/>
+                <p>日志内容二</p>
+            </div>
+        <div id="photo">
+                <h4>|最新相册</h4>
+                <div id="photo_img">
+                    <img src="images/haixing.jpg"/>
+                    <img src="images/sunshine.jpg"/>
+                    <img src="images/nignt.jpg"/>
+                    <img src="images/caoyuan.jpg"/>
+                    <img src="images/bg1.png"/>
+                    <img src="images/city.jpg"/>
+                    <h5>海 边</h5>
+                    <h5>夕 阳</h5>
+                    <h5>星 辰</h5>
+                    <h5>草 原</h5>
+                    <h5>都 市</h5>
+                    <h5>夜 景</h5>
+                </div>
+            </div>
+    </div>
+    <div id="bt">底部个人信息</div>
+
 
 </body>
 </html>

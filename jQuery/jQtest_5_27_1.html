@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件示例</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //触发keydown事件
+            $("input:text").keydown(function () {
+                $("span#tip").text("键盘被按下");
+            });
+            //触发keyup()事件
+            $("input:text").keyup(function () {
+                $("span#tip").text("键盘被释放");
+            })
+            //触发keypass()事件
+            var count = 0;
+            $("input:text").keypress(function () {
+                count++;
+                $("span#total").text(count);
+            })
+        });
+    </script>
+</head>
+<body>
+<h3>jQuery键盘事件示例</h3>
+<hr>
+<p>这是测试文本框：<input type="text" name="demo"/></p>
+<p>按键状态：<span id="tip">没有按键</span></p>
+<p>按键次数：<span id="total">0</span></p>
+</body>
+</html>

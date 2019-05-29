@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 后相邻选择器示例</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            border: 1px solid;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<h3>jQuery 后相邻选择器示例</h3>
+<hr>
+<div id="Did1">div id="Did1"</div>
+<div>普通div元素，无id名称</div>
+<script>
+    $(document).ready(function () {
+        $("div#Did1+div").css("border","2px solid red");
+    });
+</script>
+</body>
+</html>

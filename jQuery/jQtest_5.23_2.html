@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 子元素选择器示例</title>
+</head>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<style>
+    ul{
+        width: 100px;
+    }
+</style>
+<body>
+<h3>jQuery 子元素选择器示例</h3>
+<hr>
+<ul class="all">
+    <li>第一章</li>
+    <li>
+        第二章
+        <ul>
+            <li>2.1</li>
+            <li>2.2</li>
+        </ul>
+    </li>
+    <li>第三章</li>
+</ul>
+<script>
+    $(document).ready(function () {
+        $("ul.all>li").css("border","1px solid red")
+    })
+</script>
+</body>
+</html>

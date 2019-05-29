@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单选测器的使用</title>
+    <style>
+        form{
+            width: 500px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h3>jQuery 表单选择器</h3>
+    <hr>
+    <form>
+        <label>
+            用户名：
+            <input type="text" name="username" required/>
+        </label><br/>
+        <label>
+            密  码：
+            <input type="password" name="pwd"required/>
+        </label><br/>
+        <label>
+            确  认：
+            <input type="password" name="pwd"required/>
+        </label><br/>
+        <label>
+            邮  箱：
+            <input type="email" name="email"required/>
+        </label><br/>
+        <button type="submit">提交注册</button>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $(":password").css("border","1px solid red");
+        });
+    </script>
+</body>
+</html>
