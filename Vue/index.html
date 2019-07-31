@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue属性绑定和双向数据绑定</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id = "root">
+        <div v-bind:title = "title">hello world</div>
+    </div>
+    <script>
+        new Vue({
+            el:"#root",
+            datda:{
+                title: "this is hello world"
+            }
+        })
+    </script>
+</body>
+</html>

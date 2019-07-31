@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>my page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>zmunn</title>
+    <link href="./plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         *{
             margin: 0px;
@@ -215,9 +219,28 @@
     </style>
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script>
-        $(document).ready(function () {
-
-        })
+        $(function () {
+            //加载留言，用json文件模拟后台数据返回
+            //标准 jquery ajax
+            $.ajax({
+                url: "data/message.json",
+                type: "POST",
+                dataType: "json",
+                data: {},
+                success: function (result) {
+                    //看到了没，result就是json文件里的内容，把这数据格式换展示出来 这就模拟了跟后台的交互
+                    var messages = result.messages;
+                    for (var i = 0; i < messages.length; i++) {
+                        var html = "<li>" + messages[i].text + messages[i].datetime + "</li>";
+                        $("#messageUL").append(html);
+                    }
+                    //这样，数据就动态加载到页面了
+                },
+                error: function (msg) {
+                    alert("请求失败");
+                }
+            });
+        });
     </script>
 </head>
 <body>
@@ -245,15 +268,13 @@
             <li>联系方式</li>
         </ul>
     <div id="main">
+        <div id = "Bigimg">
+
+        </div>
         <div id="left">
                 <h4>|最新留言</h4>
-                <ul>
-                    <li>*留言内容一</li>
-                    <li>*留言内容二</li>
-                    <li>*留言内容三</li>
-                    <li>*留言内容四</li>
-                    <li>*留言内容五</li>
-                    <li>*留言内容六</li>
+                <ul id="messageUL">
+
                 </ul>
             </div>
         <div id="right">
@@ -293,6 +314,9 @@
     </div>
     <div id="bt">底部个人信息</div>
 
-
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="jquery-3.4.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="./plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
